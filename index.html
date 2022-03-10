@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+    </link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <span class=search-container>
+            <input type="text" class="search-box" name="city name" placeholder="City Name"></input>
+            <span class='hidden-button'></span>
+            <div class="search-dropdown hidden"><ul></ul></div>
+
+        </span>
+    </header>
+
+    <main>
+        <div class="current-forecast">
+            <h1 class="city-name">City</h1>
+            <h2 class="current-temp">-</h2>
+            <h2 class="current-feels-like">Feels like: </h2>
+            <div class="current-weather"></div>
+        </div>
+
+        <button class="show-more-btn" onclick="showMoreBtn('hourlyForecast')">Hourly Forecast</button>
+        <div class="hourly-forecast hidden-content hidden"></div>
+
+        <br>
+
+        <button class="show-more-btn" onclick="showMoreBtn('dailyForecast')">Daily Forecast</button>
+        <div class="daily-forecast hidden-content hidden"></div>
+
+</body>
+
+<script src="./main.js"></script>
+
+</html>

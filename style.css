@@ -1,0 +1,239 @@
+body {
+    background: url('./imgs/clouds.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    text-align:center;
+}
+
+.hidden {
+    display: none;
+}
+
+.search-box {
+    font-size: 1em;
+    background: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 5px;
+    width: 200px;
+    border: none;
+    position: relative;
+}
+
+.search-box:hover,
+.search-box:focus-visible {
+    border: 1px solid #333;
+    border-radius: 0px;
+    margin: -1px;
+    outline: none;
+}
+
+.search-box:focus-visible {
+    border: 2px solid #333;
+    margin: -2px;
+}
+
+.search-container {
+    white-space: nowrap;
+}
+
+.hidden-button {
+    display: inline-block;
+    background: url(./imgs/magnify.svg);
+    height: 24px; 
+    width: 24px; 
+    position: absolute;
+    margin-left: -24px;
+    margin-top: 2.5px;
+    z-index: 0; 
+}
+
+.hidden-button-changed {
+    background: url(./imgs/close.svg);
+}
+
+.search-dropdown {
+    position: absolute;
+    min-width: 210px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid #333;
+}
+
+.search-dropdown:hover {
+    cursor:default;
+}
+
+.search-dropdown ul {
+    padding: 0;
+    margin: 0;
+}
+
+.search-dropdown li {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0;
+    z-index: 1;
+}
+
+.search-dropdown span {
+    display: block;
+}
+
+.search-dropdown li:hover {
+    background:rgba(160,160,160, 0.4);
+}
+
+span .city-coords {
+    display: none;
+}
+
+.city-name {
+    font-size: 2.5em;
+}
+
+.current-temp {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.current-temp::after,
+.current-feels-like::after {
+    content: '\00B0';
+}
+
+.current-feels-like {
+    font-size: 1.2em;
+    margin-top: 0px;
+}
+
+.current-weather {
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+
+.show-more-btn {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 1em;
+    margin-top: 40px;
+    border: none;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.show-more-btn:hover {
+    background-color: #ddd;
+}
+
+.show-more-btn:active {
+    background-color: rgba(255,255,255,0.5);
+}
+
+.hidden-content {
+    background: rgba(255,255,255,0.5);
+    overflow-x: auto;
+}
+
+.hidden-content::-webkit-scrollbar {
+    height: 10px;
+}
+
+.hidden-content::-webkit-scrollbar-track {
+    background-color: rgba(210,210,210,0.8);
+}
+
+.hidden-content::-webkit-scrollbar-thumb {
+    background-color: rgba(200,200,200,0.8);
+    border-radius: 5px;
+}
+
+.hidden-content::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(160,160,160, 0.8);
+}
+
+.table-temp {
+    font-size: 1.35em;
+}
+
+.table-temp::after {
+    content: '\00B0';
+}
+
+.table-minmax::after {
+    content: '\00B0';
+}
+
+.min-temp::before {
+    content: 'Min:';
+    padding-right: 5px;
+}
+
+.max-temp::before {
+    content: 'Max:';
+    padding-right: 5px;
+}
+
+.expand-table-button {
+    display: flex;
+}
+
+.expand-table-button button {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: 0;
+    background: url('./imgs/plus.svg') no-repeat center center;
+    background-size: cover;
+}
+
+.expand-table-button button:hover {
+    background-color: rgba(200,200,200,0.8);
+}
+
+.expand-table-button button:active {
+    background-color: rgba(200,200,200,0);
+}
+
+table {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media not screen and (max-width: 900px) {
+    table tr:first-child {
+        margin-left: 20px;
+    }
+    
+    table tr:last-child {
+        margin-right: 20px;
+    }
+}
+
+table tbody {
+    display: flex;
+    align-items: stretch;
+}
+
+table tr {
+    padding: 2px;
+    align-content: flex-start;
+}
+
+table td {
+    display: flex;
+    justify-content: center;
+    min-width: 100px;
+}
+
