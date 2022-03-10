@@ -168,7 +168,7 @@ async function getCurrentWeather(coords) {
 // Displays the name, temperature followed by degrees symbol, feels like temperature in the same format, and a description of the weather.
 // @param   coords  array   Latitude and longitude of the desired location.
 async function renderCurrentWeather(coords) {
-    const data = await getCurrentWeather(coords);
+    const data = await getCurrentWeather(coords); 
     cityNameEl.textContent = data.name;
     currentTempEl.innerHTML = data.main.temp;
     currentFeelsLike.innerHTML = 'Feels like: ' + data.main.feels_like;
